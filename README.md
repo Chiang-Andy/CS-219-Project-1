@@ -2,7 +2,7 @@
 # Build Environment
 Visual Studio Code
 Apple clang 12.0.5
-# Executable & Compiling
+# Executable & Compiling 
 To compile files: Type 'make' into the terminal
 
 To execute files: After compiling using 'make', an executable titled 'hexAddition' should appear. Type './hexAddition' to launch executable
