@@ -1,4 +1,5 @@
-#include "analyzer.cpp"
+
+#include "analyzer.h"
 
 //main
 int main(){
