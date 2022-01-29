@@ -1,9 +1,12 @@
-all: hex
-hex: analyzer.o driver.cpp
-	g++ -std=c++11 analyzer.o driver.cpp -o hex
+all: hexAddition
+hexAddition: driver.o analyzer.o
+	g++ -o hexAddition driver.o analyzer.o
+
+driver.o: driver.cpp analyzer.h
+	g++ -std=c++11 -c driver.cpp
 
 analyzer.o: analyzer.cpp analyzer.h
-	g++ -c -std=c++11 analyzer.cpp
+	g++ -std=c++11 -c analyzer.cpp
 
 clean:
-	rm *.o hex
+	rm *.o hexAddition
