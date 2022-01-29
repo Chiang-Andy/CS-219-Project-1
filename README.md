@@ -69,5 +69,4 @@ Is the result correct?
 Are you wrongly calculating values with the prefix?
 Please Refer to implementation details.
 
-10 points: 10 points will be given for properly handling data types and hexadecimal numbers. Please refer to Imple-
-mentation details.
+10 points: 10 points will be given for properly handling data types and hexadecimal numbers. Please refer to Imple-mentation details.
