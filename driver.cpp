@@ -12,8 +12,7 @@ int main(){
         string add;
         uint32_t a, b;
         while(file >> add >> hex >> a >> b){ 
-            cout << "0x" << a << " + "; 
-            cout << "0x" << b << " = ";
+            cout << "0x" << a << " + " << "0x" << b << " = ";
 
             uint32_t d1 = getHex(a);
             uint32_t d2 = getHex(b);
