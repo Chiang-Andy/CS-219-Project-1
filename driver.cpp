@@ -28,5 +28,3 @@ int main(){
     }
     file.close();
 }
-
-
