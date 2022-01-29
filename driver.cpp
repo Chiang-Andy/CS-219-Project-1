@@ -7,8 +7,6 @@ int main(){
     cin >> FILENAME;
     uint32_t decimal;
 
-    cout << "0x" << setfill('0') << setw(8) << hex << decimal << endl;
-
     ifstream file(FILENAME);
     if(file.is_open()){
         string add;
