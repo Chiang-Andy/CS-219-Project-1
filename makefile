@@ -1,5 +1,5 @@
 all: hexCalculator
-hexAddition: driver.o analyzer.o
+hexCalculator: driver.o analyzer.o
 	g++ -o hexCalculator driver.o analyzer.o
 
 driver.o: driver.cpp analyzer.h
