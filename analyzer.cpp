@@ -32,15 +32,15 @@ void Analyzer::hexAND(){
 }
 
 void Analyzer::hexASR(){
-	hex = a/2; 
+	hex = a / 2; 
 }
 
 void Analyzer::hexLSR(){
-	hex = a/2; 
+	hex = a / 2; 
 }
 
 void Analyzer::hexLSL(){
-	hex = a*2; 
+	hex = a * 2; 
 }
 
 void Analyzer::hexNOT(){
