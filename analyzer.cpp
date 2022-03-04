@@ -22,7 +22,7 @@ int Analyzer::findOperator(string function){
 	return 0;
 }
 
-// Calculation
+// Calculations
 void Analyzer::hexADD(){
 	hex = a + b;
 }
@@ -59,7 +59,7 @@ void Analyzer::hexXOR(){
 	hex = a ^ b;
 }
 
-//outputs answers for two hex values
+// recieves and outputs answers for two hex values based on bitwise operator type
 Analyzer::Analyzer(string function, uint32_t a, uint32_t b) : function(function), a(a), b(b){
 	int type = findOperator(function);
 	switch(type) {
@@ -94,7 +94,7 @@ Analyzer::Analyzer(string function, uint32_t a, uint32_t b) : function(function)
 	}
 }
 
-//outputs answer for one hex values
+// recieves and outputs answers for one hex values based on bitwise operator type
 Analyzer::Analyzer(string function, uint32_t a) : function(function), a(a){
 	int type = findOperator(function);
 	switch(type){

@@ -19,13 +19,13 @@ int main(){
 			Analyzer Operator;
 			if (Operator.findOperator(function) > 5){ //finds operator
 				file >> hex >> a; // hex a
-				cout << "0x" << hex << a << " " << function << " = "; 
-				Analyzer analyzer(function, a);
+				cout << "0x" << hex << a << " " << function << " = "; //adds 0x identifier and = to end of line
+				Analyzer analyzer(function, a); // calculated output
 			}
 			else{ 
 				file >> hex >> a >> b; // hex a and b
-				cout << "0x" << hex << a << " " << function << " " << "0x" << hex << b << " = ";
-				Analyzer analyzer(function, a, b); 
+				cout << "0x" << hex << a << " " << function << " " << "0x" << hex << b << " = "; //adds 0x identifier and = to end of line
+				Analyzer analyzer(function, a, b); // calculated output
 			}
 		}
  	}
@@ -34,3 +34,16 @@ int main(){
     }
     return 0;
 }
+
+/*
+from part 1
+
+string add;
+        uint32_t a, b;
+        while(file >> add >> hex >> a >> b){ 
+            cout << "0x" << a << " + " << "0x" << b << " = ";
+
+            uint32_t d1 = getHex(a);
+            uint32_t d2 = getHex(b);
+            hexConversion(hexAddition(d1, d2));
+*/
