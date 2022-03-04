@@ -10,7 +10,7 @@ To execute files: After compiling using 'make', an executable titled 'hexCalcula
 
 To clean .o and executable: Type 'make clean' into the terminal. This will remove files with .o and the executable 
 # Running The Program
-After launching the executable 'hexAddition', instructions should appear within the terminal display.
+After launching the executable 'hexCalculator', instructions should appear within the terminal display.
 
     Input the filename.
   
@@ -18,6 +18,8 @@ After launching the executable 'hexAddition', instructions should appear within 
 
 # Note:
 The txt file given for the project has been renamed 'hex.txt'. As such, input the filename 'hex.txt'.
+
+Modify bitwise values to calculate different values with varying operators. Current values used for all new operators is 0xAAA5555   0x555AAAA.
 
 Source and Header files were created for ease of access and for future improvement on code.
 
@@ -61,7 +63,7 @@ The result of the addition operation must be displayed to the terminal or build 
 Your code should follow proper code commenting and indentation procedures.
 Please refer to the documents on canvas for help on formatting.
 
-# Extension
+# Extension (Part 2)
 ADD - Add the operands
 
 AND - Do a bitwise AND of the operands
@@ -79,15 +81,12 @@ SUB - Subtract the second operand from the first operand
 XOR - Do a bitwise exclusive OR of the operands
 
 # Rubic
-30 points: 30 points will be distributed based on working code. As detailed in this document.
+45 points: 5 points will be given for each operation and respectively displaying the operation, operands and result to the terminal
 
-30 points: 30 points will be distributed based on properly documented code. As detailed in this document.
+30 points: 30 points will be given if your code both compiles and runs. If it compiles but doesn’t run you will lose 15 points.
 
-30 points: 30 points will be distributed based on whether or not you solved the task you were given.
-Did you properly read the commands from the text file?
-Did you properly display the result?
-Is the result correct?
-Are you wrongly calculating values with the prefix?
-Please Refer to implementation details.
+10 points: 10 points will be given if you provide the makefile as requested.
 
-10 points: 10 points will be given for properly handling data types and hexadecimal numbers. Please refer to Imple-mentation details.
+10 points: 10 points will be given if you provide a text file for input
+
+5 points: 5 points will be given if you use the proper data type as detailed in this document.
