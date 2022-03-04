@@ -12,8 +12,8 @@
 using namespace std;
 
 class Analyzer{
-    uint32_t a, b = 0; //variables
-	uint32_t hex = 0; //hex output, answer
+    uint32_t a, b; //variables
+	uint32_t hex; //hex output, answer
 	string function; //operator function type identifier
 	char Operators[9][4] = {"ADD" , "AND" , "ORR" , "SUB" , "XOR" , "ASR" , "LSR" , "LSL" , "NOT"}; //operators list
 
