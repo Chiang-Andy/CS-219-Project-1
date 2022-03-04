@@ -69,7 +69,7 @@ Analyzer::Analyzer(string function, uint32_t a, uint32_t b) : function(function)
             break; 
         }
 		case 2:{ 
-            hexADD(); 
+            hexAND(); 
             cout << "0x" << hex << endl;
             break;
         }
@@ -104,7 +104,7 @@ Analyzer::Analyzer(string function, uint32_t a) : function(function), a(a){
             break; 
         }
 		case 2:{ 
-            hexADD(); 
+            hexAND(); 
             cout << "0x" << hex << endl;
             break;
         }
