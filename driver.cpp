@@ -16,8 +16,8 @@ int main(){
         string function;
         uint32_t a, b;
         while (file >> function){
-			Analyzer functionFinder;
-			if (functionFinder.findOperator(function) > 5){ 
+			Analyzer Operator;
+			if (Operator.findOperator(function) > 5){ //finds operator
 				file >> hex >> a; // hex a
 				cout << "0x" << hex << a << " " << function << " = "; 
 				Analyzer analyzer(function, a);
