@@ -38,6 +38,8 @@ https://stackoverflow.com/questions/1070497/c-convert-hex-string-to-signed-integ
 https://stackoverflow.com/questions/43028865/how-to-print-hex-from-uint32-t
 
 https://stackoverflow.com/questions/49068932/converting-stdstring-to-uint32-t
+
+https://www.programiz.com/cpp-programming/bitwise-operators
 # Project Instructions
 You are tasked with designing a machine language simulator. This project must be written in C or C++.
 If you elect to use C++ be careful with your objects. Your code should be versatile enough to be modified
@@ -58,6 +60,17 @@ ever need to retrieve the information or store it in a simulated register. But t
 The result of the addition operation must be displayed to the terminal or build environment.
 Your code should follow proper code commenting and indentation procedures.
 Please refer to the documents on canvas for help on formatting.
+
+# Extension
+ADD - Add the operands
+AND - Do a bitwise AND of hte operands
+ASR - Do a 1-bit arthmetic shift right on the first operand
+LSR - Do a 1-bit logical shift left on the first operand
+NOT - Do a bitwise NOT on the first operand
+ORR - Do a bitwise OR of the operands
+SUB - Subtract the second operand from the first operand
+XOR - Do a bitwise exclusive OR of the operands
+
 # Rubic
 30 points: 30 points will be distributed based on working code. As detailed in this document.
 
