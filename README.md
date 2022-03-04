@@ -19,7 +19,7 @@ After launching the executable 'hexCalculator', instructions should appear withi
 # Note:
 The txt file given for the project has been renamed 'hex.txt'. As such, input the filename 'hex.txt'.
 
-Modify bitwise values to calculate different values with varying operators. Current values used for all new operator is 0xAAA5555   0x555AAAA.
+Modify bitwise values to calculate different values with varying operators. Current values used for all new operators is 0xAAA5555   0x555AAAA.
 
 Source and Header files were created for ease of access and for future improvement on code.
 
