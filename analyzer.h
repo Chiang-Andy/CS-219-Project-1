@@ -14,14 +14,15 @@ using namespace std;
 class Analyzer{
     uint32_t a, b = 0; //variables
 	uint32_t hex = 0; //hex output, answer
-	string function;
-	char functionList[9][4] = {"ADD" , "AND" , "ORR" , "SUB" , "XOR" , "ASR" , "LSR" , "LSL" , "NOT"}; 
+	string function; 
+	char Operators[9][4] = {"ADD" , "AND" , "ORR" , "SUB" , "XOR" , "ASR" , "LSR" , "LSL" , "NOT"}; //operators list
 
 public:
-    Analyzer() = default;
-    Analyzer(string, uint32_t, uint32_t);
-	Analyzer(string, uint32_t);
+    Analyzer(){} //default constructor
+    Analyzer(string, uint32_t, uint32_t); //For two hex values
+	Analyzer(string, uint32_t); //For one hex values
  
+	//Calculating functions
 	void hexADD(); 
 	void hexAND(); 
 	void hexASR(); 
@@ -32,12 +33,13 @@ public:
 	void hexSUB(); 
 	void hexXOR();
 
-	int findFunction(string func);
+	int findOperator(string); //Finding bitwise operator
 };
 
 #endif
 
 /*
+From part 1
 uint32_t getHex(uint32_t);
 void hexConversion(uint32_t);
 uint32_t hexAddition(uint32_t, uint32_t);

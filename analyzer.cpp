@@ -4,13 +4,13 @@
 #include "analyzer.h"
 
 //Finding Bitwise function
-int Analyzer::findFunction(string function){
+int Analyzer::findOperator(string function){
 	for (int i = 0; i < 9; i++){
-		if (function==(functionList[i])){
+		if (function==(Operators[i])){
 			return i+1;
 		}
 	}
-	return -1;
+	return 0;
 }
 
 // Calculation
@@ -50,8 +50,9 @@ void Analyzer::hexXOR(){
 	hex = a ^ b;
 }
 
+//outputs answers for two hex values
 Analyzer::Analyzer(string function, uint32_t a, uint32_t b) : function(function), a(a), b(b){
-	int type = findFunction(function);
+	int type = findOperator(function);
 	switch(type) {
 		case 1:{ 
             hexADD();
@@ -84,8 +85,9 @@ Analyzer::Analyzer(string function, uint32_t a, uint32_t b) : function(function)
 	}
 }
 
+//outputs answer for one hex values
 Analyzer::Analyzer(string function, uint32_t a) : function(function), a(a){
-	int type = findFunction(function);
+	int type = findOperator(function);
 	switch(type){
         case 1:{ 
             hexADD();
@@ -139,6 +141,7 @@ Analyzer::Analyzer(string function, uint32_t a) : function(function), a(a){
 }
 
 /*
+From part 1
 //Get the Hex object
 //stringstream hex from hex.txt
 uint32_t getHex(uint32_t hex){
