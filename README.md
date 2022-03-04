@@ -63,12 +63,19 @@ Please refer to the documents on canvas for help on formatting.
 
 # Extension
 ADD - Add the operands
-AND - Do a bitwise AND of hte operands
+
+AND - Do a bitwise AND of the operands
+
 ASR - Do a 1-bit arthmetic shift right on the first operand
+
 LSR - Do a 1-bit logical shift left on the first operand
+
 NOT - Do a bitwise NOT on the first operand
+
 ORR - Do a bitwise OR of the operands
+
 SUB - Subtract the second operand from the first operand
+
 XOR - Do a bitwise exclusive OR of the operands
 
 # Rubic
