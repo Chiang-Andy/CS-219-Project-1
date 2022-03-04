@@ -19,6 +19,8 @@ After launching the executable 'hexAddition', instructions should appear within 
 # Note:
 The txt file given for the project has been renamed 'hex.txt'. As such, input the filename 'hex.txt'.
 
+Modify bitwise values to calculate different values with varying operators
+
 Source and Header files were created for ease of access and for future improvement on code.
 
 Based off of previous project: https://github.com/UNR-Teaching/programmingassignment1-2012-Chiang-Andy
