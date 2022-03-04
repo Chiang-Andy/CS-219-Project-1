@@ -3,6 +3,15 @@
 
 #include "analyzer.h"
 
+//Get the Hex object
+//stringstream hex from hex.txt
+uint32_t getHex(uint32_t hex){
+    stringstream s;
+    s << hex;
+    s >> hex;
+    return hex;
+} 
+
 //Finding Bitwise function
 int Analyzer::findOperator(string function){
 	for (int i = 0; i < 9; i++){
@@ -142,6 +151,7 @@ Analyzer::Analyzer(string function, uint32_t a) : function(function), a(a){
 
 /*
 From part 1
+
 //Get the Hex object
 //stringstream hex from hex.txt
 uint32_t getHex(uint32_t hex){

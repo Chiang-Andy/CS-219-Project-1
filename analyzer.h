@@ -33,6 +33,7 @@ public:
 	void hexSUB(); 
 	void hexXOR();
 
+	uint32_t getHex(uint32_t); //get hex
 	int findOperator(string); //Finding bitwise operator
 };
 
