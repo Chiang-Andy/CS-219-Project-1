@@ -6,7 +6,7 @@ Apple clang 12.0.5
 # Executable & Compiling 
 To compile files: Type 'make' into the terminal
 
-To execute files: After compiling using 'make', an executable titled 'hexAddition' should appear. Type './hexAddition' to launch executable
+To execute files: After compiling using 'make', an executable titled 'hexCalculator' should appear. Type './hexCalculator' to launch executable
 
 To clean .o and executable: Type 'make clean' into the terminal. This will remove files with .o and the executable 
 # Running The Program
