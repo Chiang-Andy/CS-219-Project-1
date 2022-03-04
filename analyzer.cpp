@@ -1,5 +1,144 @@
+//Andy Chiang
+//analyzer.cpp
+
 #include "analyzer.h"
 
+//Finding Bitwise function
+int Analyzer::findFunction(string function){
+	for (int i = 0; i < 9; i++){
+		if (function==(functionList[i])){
+			return i+1;
+		}
+	}
+	return -1;
+}
+
+// Calculation
+void Analyzer::hexADD(){
+	hex = a + b;
+}
+
+void Analyzer::hexAND(){
+	hex = a & b;
+}
+
+void Analyzer::hexASR(){
+	hex = a/2; 
+}
+
+void Analyzer::hexLSR(){
+	hex = a/2; 
+}
+
+void Analyzer::hexLSL(){
+	hex = a*2; 
+}
+
+void Analyzer::hexNOT(){
+	hex = ~a;
+}
+
+void Analyzer::hexORR(){
+	hex = a | b;
+}
+
+void Analyzer::hexSUB(){
+	hex = a - b;
+}
+
+void Analyzer::hexXOR(){
+	hex = a ^ b;
+}
+
+Analyzer::Analyzer(string function, uint32_t a, uint32_t b) : function(function), a(a), b(b){
+	int type = findFunction(function);
+	switch(type) {
+		case 1:{ 
+            hexADD();
+            cout << "0x" << hex << endl; 
+            break; 
+        }
+		case 2:{ 
+            hexADD(); 
+            cout << "0x" << hex << endl;
+            break;
+        }
+		case 3:{ 
+            hexORR(); 
+            cout << "0x" << hex << endl;
+            break; 
+        }
+		case 4:{ 
+            hexSUB(); 
+            cout << "0x" << hex << endl;
+            break; 
+        }
+		case 5:{ 
+            hexXOR();
+            cout << "0x" << hex << endl;
+             break; 
+        }
+    	default:{ 
+            break; 
+        }
+	}
+}
+
+Analyzer::Analyzer(string function, uint32_t a) : function(function), a(a){
+	int type = findFunction(function);
+	switch(type){
+        case 1:{ 
+            hexADD();
+            cout << "0x" << hex << endl; 
+            break; 
+        }
+		case 2:{ 
+            hexADD(); 
+            cout << "0x" << hex << endl;
+            break;
+        }
+		case 3:{ 
+            hexORR(); 
+            cout << "0x" << hex << endl;
+            break; 
+        }
+		case 4:{ 
+            hexSUB(); 
+            cout << "0x" << hex << endl;
+            break; 
+        }
+		case 5:{ 
+            hexXOR();
+            cout << "0x" << hex << endl;
+             break; 
+        }
+		case 6:{ 
+            hexASR(); 
+            cout << "0x" << hex << endl;
+            break; 
+        }
+		case 7:{ 
+            hexLSR(); 
+            cout << "0x" << hex << endl;
+            break; 
+        }
+		case 8:{ 
+            hexLSL(); 
+            cout << "0x" << hex << endl;
+            break; 
+        }
+		case 9:{ 
+            hexNOT(); 
+            cout << "0x" << hex << endl;
+            break; 
+        }
+    	default:{
+        break;
+        }
+	}
+}
+
+/*
 //Get the Hex object
 //stringstream hex from hex.txt
 uint32_t getHex(uint32_t hex){
@@ -21,3 +160,4 @@ uint32_t hexAddition(uint32_t d1, uint32_t d2){
 void hexConversion(uint32_t decimal){
     cout << "0x" << hex << decimal << endl; //"0x" to set format for final value
 } 
+*/
