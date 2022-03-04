@@ -12,7 +12,7 @@ uint32_t getHex(uint32_t hex){
     return hex;
 } 
 
-//Finding Bitwise function
+//Finding Bitwise Operator
 int Analyzer::findOperator(string function){
 	for (int i = 0; i < 9; i++){
 		if (function==(Operators[i])){
