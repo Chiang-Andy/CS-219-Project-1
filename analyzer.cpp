@@ -73,31 +73,31 @@ Analyzer::Analyzer(string function, uint32_t Rn, uint32_t Rm) : function(functio
 	switch(type) {
 		case 1:{ 
             hexADD();
-            cout << "0x" << hex << endl; 
+            //cout << "0x" << hex << endl; 
             break; 
         }
 		case 2:{ 
             hexAND(); 
-            cout << "0x" << hex << endl;
+            //cout << "0x" << hex << endl;
             break;
         }
 		case 3:{ 
             hexORR(); 
-            cout << "0x" << hex << endl;
+            //cout << "0x" << hex << endl;
             break; 
         }
 		case 4:{ 
             hexSUB(); 
-            cout << "0x" << hex << endl;
+            //cout << "0x" << hex << endl;
             break; 
         }
 		case 5:{ 
             hexXOR();
-            cout << "0x" << hex << endl;
+            //cout << "0x" << hex << endl;
              break; 
         }
         case 6:{
-            hexMOV();
+            //hexMOV();
             break;
         }
     	default:{ 
@@ -112,47 +112,47 @@ Analyzer::Analyzer(string function, uint32_t Rn) : function(function), Rn(Rn){
 	switch(type){
         case 1:{ 
             hexADD();
-            cout << "0x" << hex << endl; 
+            //cout << "0x" << hex << endl; 
             break; 
         }
 		case 2:{ 
             hexAND(); 
-            cout << "0x" << hex << endl;
+            //cout << "0x" << hex << endl;
             break;
         }
 		case 3:{ 
-            hexORR(); 
+            //hexORR(); 
             cout << "0x" << hex << endl;
             break; 
         }
 		case 4:{ 
-            hexSUB(); 
+            //hexSUB(); 
             cout << "0x" << hex << endl;
             break; 
         }
 		case 5:{ 
             hexXOR();
-            cout << "0x" << hex << endl;
-             break; 
+            //cout << "0x" << hex << endl;
+            break; 
         }
 		case 6:{ 
             hexASR(); 
-            cout << "0x" << hex << endl;
+            //cout << "0x" << hex << endl;
             break; 
         }
 		case 7:{ 
             hexLSR(); 
-            cout << "0x" << hex << endl;
+            //cout << "0x" << hex << endl;
             break; 
         }
 		case 8:{ 
             hexLSL(); 
-            cout << "0x" << hex << endl;
+            //cout << "0x" << hex << endl;
             break; 
         }
 		case 9:{ 
             hexNOT(); 
-            cout << "0x" << hex << endl;
+            //cout << "0x" << hex << endl;
             break; 
         case 10:{
             hexMOV();
