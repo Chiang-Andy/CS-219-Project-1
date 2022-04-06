@@ -14,7 +14,7 @@ uint32_t getHex(uint32_t hex){
 
 //Finding Bitwise Operator
 int Analyzer::findOperator(string function){
-	for (int i = 0; i < 9; i++){
+	for (int i = 0; i < 10; i++){
 		if (function==(Operators[i])){
 			return i+1;
 		}
@@ -22,45 +22,53 @@ int Analyzer::findOperator(string function){
 	return 0;
 }
 
+int Analyzer::findRegister(string r){
+    r.erase(0,1);
+    return stoi(r);
+}
+
 // Calculations
 void Analyzer::hexADD(){
-	hex = a + b;
+	Rd = Rn + Rm;
 }
 
 void Analyzer::hexAND(){
-	hex = a & b;
+	Rd = Rn & Rm;
 }
 
 void Analyzer::hexASR(){
-	hex = a / 2; 
+	Rd = Rn / 2; 
 }
 
 void Analyzer::hexLSR(){
-	hex = a / 2; 
+	Rd = Rn / 2; 
 }
 
 void Analyzer::hexLSL(){
-	hex = a * 2; 
+	Rd = Rn * 2; 
 }
 
 void Analyzer::hexNOT(){
-	hex = ~a;
+	Rd = ~Rn;
 }
 
 void Analyzer::hexORR(){
-	hex = a | b;
+	Rd = Rn | Rm;
 }
 
 void Analyzer::hexSUB(){
-	hex = a - b;
+	Rd = Rn - Rm;
 }
 
 void Analyzer::hexXOR(){
-	hex = a ^ b;
+	Rd = Rn ^ Rm;
 }
 
+void Analyzer::hexMOV(){
+    Rd = Rn;
+}
 // recieves and outputs answers for two hex values based on bitwise operator type
-Analyzer::Analyzer(string function, uint32_t a, uint32_t b) : function(function), a(a), b(b){
+Analyzer::Analyzer(string function, uint32_t Rn, uint32_t Rm) : function(function), Rn(Rn), Rm(Rm){
 	int type = findOperator(function);
 	switch(type) {
 		case 1:{ 
@@ -88,6 +96,10 @@ Analyzer::Analyzer(string function, uint32_t a, uint32_t b) : function(function)
             cout << "0x" << hex << endl;
              break; 
         }
+        case 6:{
+            hexMOV();
+            break;
+        }
     	default:{ 
             break; 
         }
@@ -95,7 +107,7 @@ Analyzer::Analyzer(string function, uint32_t a, uint32_t b) : function(function)
 }
 
 // recieves and outputs answers for one hex values based on bitwise operator type
-Analyzer::Analyzer(string function, uint32_t a) : function(function), a(a){
+Analyzer::Analyzer(string function, uint32_t Rn) : function(function), Rn(Rn){
 	int type = findOperator(function);
 	switch(type){
         case 1:{ 
@@ -142,6 +154,10 @@ Analyzer::Analyzer(string function, uint32_t a) : function(function), a(a){
             hexNOT(); 
             cout << "0x" << hex << endl;
             break; 
+        case 10:{
+            hexMOV();
+            break;
+        }
         }
     	default:{
         break;

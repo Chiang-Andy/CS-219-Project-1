@@ -8,19 +8,28 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include <iomanip>
+#include <map>
+#include <algorithm>
+#include <cstdint>
 
 using namespace std;
 
 class Analyzer{
+	/* from part 1 and 2
     uint32_t a, b; //variables
 	uint32_t hex; //hex output, answer
-	string function; //operator function type identifier
-	char Operators[9][4] = {"ADD" , "AND" , "ORR" , "SUB" , "XOR" , "ASR" , "LSR" , "LSL" , "NOT"}; //operators list
+	*/
+	uint32_t Rn = 0; //first operand
+	uint32_t Rm = 0; //second operand 
+	uint32_t Rd = 0; //third operand or final output
+	string function = ""; //operator function type identifier
+	char Operators[10][4] = {"ADD" , "AND" , "ORR" , "SUB" , "XOR" , "ASR" , "LSR" , "LSL" , "NOT", "MOV"}; //operators list
 
 public:
     Analyzer(){} //default constructor
     Analyzer(string, uint32_t, uint32_t); //For two hex values
-	Analyzer(string, uint32_t); //For one hex values
+	Analyzer(string function, uint32_t Rn); //For one hex values
  
 	//Calculating operators
 	void hexADD(); 
@@ -32,9 +41,12 @@ public:
 	void hexORR(); 
 	void hexSUB(); 
 	void hexXOR();
+	void hexMOV(); //part 3 function. move the second operand to the first operand
 
 	uint32_t getHex(uint32_t); //get hex
 	int findOperator(string); //Finding bitwise operator
+	int findRegister(string);
+	
 };
 
 #endif
