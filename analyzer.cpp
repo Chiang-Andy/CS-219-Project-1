@@ -2,7 +2,7 @@
 //analyzer.cpp
 
 #include "analyzer.h"
-
+/*
 //Get the Hex object
 //stringstream hex from hex.txt
 uint32_t getHex(uint32_t hex){
@@ -11,6 +11,7 @@ uint32_t getHex(uint32_t hex){
     s >> hex;
     return hex;
 } 
+*/
 
 //Finding Bitwise Operator
 int Analyzer::findOperator(string function){

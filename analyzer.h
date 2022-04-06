@@ -43,7 +43,7 @@ public:
 	void hexXOR();
 	void hexMOV(); //part 3 function. move the second operand to the first operand
 
-	uint32_t getHex(uint32_t); //get hex
+	//uint32_t getHex(uint32_t); //get hex
 	int findOperator(string); //Finding bitwise operator
 	int findRegister(string);
 	uint32_t getRd() const{
