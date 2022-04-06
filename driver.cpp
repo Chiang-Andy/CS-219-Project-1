@@ -32,14 +32,14 @@ int main(){
 			Analyzer Operator;
 			if (Operator.findOperator(function) > 5){ //finds operator
 				file >> Rd >> Rn; 
-				cout << function << " " << Rd << " " << Rd << endl; 
+				cout << function << " " << Rd << " " << Rn << endl; 
                 Analyzer analyzer(function, registers[Rn]);
 				registers[Rd] = analyzer.getRd();
                 cout << "     " << Rd << " = 0x" << hex << registers[Rd] << endl;
 			}
 			else{ 
                 file >> Rd >> Rn >> Rm; 
-				cout << function << " " << Rd << " " << Rd << endl; 
+				cout << function << " " << Rd << " " << Rn << " " << Rm << endl; 
 				Analyzer analyzer(function, registers[Rn], registers[Rm]);
 				registers[Rd] = analyzer.getRd();
                 cout << "     " << Rd << " = 0x" << hex << registers[Rd] << endl;
