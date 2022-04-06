@@ -34,12 +34,14 @@ int main(){
 				file >> Rd >> Rn; 
 				cout << function << " " << Rd << " " << Rd << endl; 
                 Analyzer analyzer(function, registers[Rn]);
+				registers[Rd] = analyzer.getRd();
                 cout << "     " << Rd << " = 0x" << hex << registers[Rd] << endl;
 			}
 			else{ 
                 file >> Rd >> Rn >> Rm; 
 				cout << function << " " << Rd << " " << Rd << endl; 
 				Analyzer analyzer(function, registers[Rn], registers[Rm]);
+				registers[Rd] = analyzer.getRd();
                 cout << "     " << Rd << " = 0x" << hex << registers[Rd] << endl;
 			}
 		}

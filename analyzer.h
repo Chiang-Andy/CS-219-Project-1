@@ -46,7 +46,9 @@ public:
 	uint32_t getHex(uint32_t); //get hex
 	int findOperator(string); //Finding bitwise operator
 	int findRegister(string);
-	
+	uint32_t getRd() const{
+		return Rd;
+	}
 };
 
 #endif
