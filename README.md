@@ -1,4 +1,4 @@
-# CS-219-Project-part-2
+# CS-219-Project-part-3
 # Build Environment
 Visual Studio Code
 
@@ -6,20 +6,18 @@ Apple clang 12.0.5
 # Executable & Compiling 
 To compile files: Type 'make' into the terminal
 
-To execute files: After compiling using 'make', an executable titled 'hexCalculator' should appear. Type './hexCalculator' to launch executable
+To execute files: After compiling using 'make', an executable titled 'driverExecutable' should appear. Type './driverExecutable' to launch executable
 
 To clean .o and executable: Type 'make clean' into the terminal. This will remove files with .o and the executable 
 # Running The Program
-After launching the executable 'hexCalculator', instructions should appear within the terminal display.
+After launching the executable 'driverExecutable', instructions should appear within the terminal display.
 
     Input the filename.
   
     Example: filename.txt
 
 # Note:
-The txt file given for the project has been renamed 'hex.txt'. As such, input the filename 'hex.txt'.
-
-Modify bitwise values to calculate different values with varying operators. Current values used for all new operators is 0xAAA5555   0x555AAAA.
+The txt file given for the project has been renamed 'file.txt'. As such, input the filename 'file.txt'.
 
 Source and Header files were created for ease of access and for future improvement on code.
 
@@ -80,6 +78,24 @@ SUB - Subtract the second operand from the first operand
 
 XOR - Do a bitwise exclusive OR of the operands
 
+# Extension (Part 3)
+MOV Rd, #IMM
+
+     Moves the immediate operand into Rd
+     Rd can be r0-r7
+     IMM can be any 32-bit constant expressed in hex with a 0x prefix
+OPCODE Rd, Rn, Rm
+
+
+    Does the specified operation on Rn and Rm, stores the result in Rd
+    OPCODE can be ADD, SUB, AND, ORR, or XOR
+    Rd, Rn, and Rm can be r0-r7
+OPCODE Rd, Rn
+
+    Does the specified 1-bit shift on Rn, stores the result in Rd
+    OPCODE can be ASR, LSR, or LSL
+    Rd and Rn can be r0-r7
+    
 # Rubic
 45 points: 5 points will be given for each operation and respectively displaying the operation, operands and result to the terminal
 
@@ -90,3 +106,4 @@ XOR - Do a bitwise exclusive OR of the operands
 10 points: 10 points will be given if you provide a text file for input
 
 5 points: 5 points will be given if you use the proper data type as detailed in this document.
+
