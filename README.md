@@ -40,6 +40,12 @@ https://stackoverflow.com/questions/43028865/how-to-print-hex-from-uint32-t
 https://stackoverflow.com/questions/49068932/converting-stdstring-to-uint32-t
 
 https://www.programiz.com/cpp-programming/bitwise-operators
+
+http://eceweb.ucsd.edu/~gert/ece30/CN2.pdf
+
+https://www2.southeastern.edu/Academics/Faculty/kyang/2016/Summer/CMPS290/ClassNotes/CMPS290ClassNotesChap02.pdf
+
+https://stackoverflow.com/questions/3207018/register-keyword-in-c
 # Project Instructions
 You are tasked with designing a machine language simulator. This project must be written in C or C++.
 If you elect to use C++ be careful with your objects. Your code should be versatile enough to be modified
